@@ -4,6 +4,8 @@ var Employee = require('../employee.js');
 var Clinician = require('../clinician.js');
 var Department = require('../department.js');
 var Operations = require('../operations.js');
+var HeadQuarters = require('../headquarters.js');
+var FieldOffice = require('../fieldOffice.js');
 
 describe('specs for employee.js', function() {
 
@@ -67,3 +69,27 @@ describe('specs for operations', function() {
 	});
 
 });
+
+describe('specs for headquarters', function() {
+
+	let testHQ = new HeadQuarters();
+	testHQ.setFieldOffice('Nashville');
+
+	it('HeadQuarters should be defined', function() {
+		expect(testHQ).toBeDefined();
+	});
+
+	it('can assign field offices to _fieldOffices array', function() {
+		expect(testHQ.fieldOffices).toEqual(jasmine.arrayContaining(['Nashville']));
+	});
+});
+
+describe('specs for field office -- ', function() {
+	
+	let testFO = new FieldOffice();
+
+	it('FieldOffice should be defined', function() {
+		expect(testFO).toBeDefined();
+	});
+	
+})
