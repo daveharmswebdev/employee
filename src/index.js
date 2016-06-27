@@ -5,4 +5,4 @@ var Clinician = require('../src/clinician');
 
 var daveClinician = new Clinician('Dave', 'Harms', 'RN');
 
-console.log(daveClinician);
+console.log(daveClinician, daveClinician.getName());

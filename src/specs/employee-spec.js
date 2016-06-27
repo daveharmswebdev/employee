@@ -3,6 +3,7 @@
 var Employee = require('../employee.js');
 var Clinician = require('../clinician.js');
 var Department = require('../department.js');
+var Operations = require('../operations.js');
 
 describe('specs for employee.js', function() {
 
@@ -51,4 +52,18 @@ describe('specs for clinician.js', function() {
 	it('clinican should have specialty', function() {
 		expect(testC.specialty).toEqual('RN');
 	});	
+});
+
+describe('specs for operations', function() {
+
+	let testO = new Operations('John', 'Doe', 'Developer');
+
+	it('Operations to be defined', function() {
+		expect(testO).toBeDefined();
+	});
+
+	it('there should be a responsibility variable', function() {
+		expect(testO.responsibility).toEqual('Developer');
+	});
+
 });

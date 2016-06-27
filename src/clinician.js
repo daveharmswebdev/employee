@@ -8,8 +8,8 @@ var Clinician = function(first, last, specialty) {
 	this.lastName = last;
 };
 Clinician.prototype = new Employee();
-Clinician.prototype.getName = function() {
-	return `${this.firstName} ${this.lastName}`;
-};
+// Clinician.prototype.getName = function() {
+// 	return `${this.firstName} ${this.lastName}`;
+// };
 
 module.exports = Clinician;
