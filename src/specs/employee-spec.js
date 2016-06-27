@@ -70,26 +70,32 @@ describe('specs for operations', function() {
 
 });
 
+
+describe('specs for field office -- ', function() {
+	
+	let testFO = new FieldOffice("Nashville");
+
+	it('FieldOffice should be defined', function() {
+		expect(testFO).toBeDefined();
+	});
+
+	it('field office should have a location', function() {
+		expect(testFO.location).toEqual('Nashville');
+	});
+
+});
+
 describe('specs for headquarters', function() {
 
 	let testHQ = new HeadQuarters();
-	testHQ.setFieldOffice('Nashville');
+	let testFO = new FieldOffice("Nashville");
+	testHQ.setFieldOffice(testFO);
 
 	it('HeadQuarters should be defined', function() {
 		expect(testHQ).toBeDefined();
 	});
 
 	it('can assign field offices to _fieldOffices array', function() {
-		expect(testHQ.fieldOffices).toEqual(jasmine.arrayContaining(['Nashville']));
+		expect(testHQ.fieldOffices).toEqual(jasmine.any(Object));
 	});
 });
-
-describe('specs for field office -- ', function() {
-	
-	let testFO = new FieldOffice();
-
-	it('FieldOffice should be defined', function() {
-		expect(testFO).toBeDefined();
-	});
-	
-})

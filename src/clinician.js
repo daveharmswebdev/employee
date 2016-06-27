@@ -3,6 +3,7 @@
 var Employee = require('../src/employee');
 
 var Clinician = function(first, last, specialty) {
+	this.title = 'clinician';
 	this.specialty = specialty;
 	this.firstName = first;
 	this.lastName = last;
