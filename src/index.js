@@ -17,6 +17,7 @@ function report(object) {
 	var job = object.title === 'clinician' ? object.specialty : object.responsibility;
 	var report = `${object.getName()} works as a ${object.title}, in the ${object.assigment}, and is a ${job}.`
 	console.log(report);
+	console.log(object);
 }
 
 report(daveClinician);
